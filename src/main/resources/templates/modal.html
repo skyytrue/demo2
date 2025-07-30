@@ -1,0 +1,37 @@
+
+  <!-- Modal форма добавления заявки -->
+<form method="post" th:action="@{/add-food}">
+  <div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="addModalLabel">Добавить новую заявку</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" ></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Calories(Cal)</label>
+            <input type="text" class="form-control" name="calories"  required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Amount</label>
+            <input type="text" class="form-control" name="amounts"  required>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Price(KZT)</label>
+            <input type="text" class="form-control" name="price"  required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Add food</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

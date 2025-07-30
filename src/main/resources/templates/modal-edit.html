@@ -1,0 +1,39 @@
+<!-- modal-edit.html -->
+<!-- modal-edit.html -->
+<div th:fragment="editModal(food)">
+<form method="post" th:action="@{'/food-edit/' + ${food.id}}">
+  <div class="modal fade" th:id="'editModal__' + ${food.id}" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editModalLabel">Edit Food</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Name</label>
+              <input type="text" class="form-control" name="name" th:value="${food.name}" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Calories</label>
+              <input type="number" class="form-control" name="calories" th:value="${food.calories}" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Amount</label>
+              <input type="number" class="form-control" name="amounts" th:value="${food.amounts}" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Price</label>
+              <input type="number" class="form-control" name="price" th:value="${food.price}" required>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</form>
+</div>
